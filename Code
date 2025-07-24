@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class ExamSeatingArrangement {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input: Number of rows, columns, and students
+        System.out.print("Enter number of rows: ");
+        int rows = scanner.nextInt();
+        System.out.print("Enter number of columns: ");
+        int columns = scanner.nextInt();
+        System.out.print("Enter number of students: ");
+        int students = scanner.nextInt();
+
+        int totalSeats = rows * columns;
+
+        // Check if seats are sufficient
+        if (students > totalSeats) {
+            System.out.println("Not enough seats for all students!");
+            return;
+        }
+
+        // Arrange students in a 2D seating grid
+        int[][] seatingArrangement = new int[rows][columns];
+        int studentId = 1;
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                if (studentId <= students) {
+                    seatingArrangement[i][j] = studentId++;
+                } else {
+                    seatingArrangement[i][j] = 0; // Empty seat
+                }
+            }
+        }
+
+        // Output: Display seating arrangement
+        System.out.println("\nSeating Arrangement:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                if (seatingArrangement[i][j] == 0) {
+                    System.out.print("Empty\t");
+                } else {
+                    System.out.print("S" + seatingArrangement[i][j] + "\t");
+                }
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
