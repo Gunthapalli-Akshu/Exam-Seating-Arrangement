@@ -25,29 +25,27 @@ A simple Java program to arrange students into an exam hall seating layout based
 
 ## 🗂️ Project Structure
 ExamSeatingArrangement/
-├── ExamSeatingArrangement.java # Main Java source file
-└── seating_arrangement.txt # (Optional) Output file if file export is added
+1. ExamSeatingArrangement.java # Main Java source file
+2. seating_arrangement.txt # (Optional) Output file if file export is added
 
 ---
 
-Compile the program using javac:
-javac ExamSeatingArrangement.java
+▶️ How to Run the Program
+1. Open terminal or command prompt
+2. Compile the java program : javac ExamSeatingArrangement.java
+3. Run the program : java ExamSeatingArrangement
 
 ---
 
-Run the program:
-java ExamSeatingArrangement
-
----
-
-Enter the required inputs when prompted:
+🧪 Sample Input
+When you run the program, the user is prompted to enter:
 Enter number of rows: 3
 Enter number of columns: 4
 Enter number of students: 10
 
 ---
 
-Sample Output:
+🖨️ Sample Output
 Enter number of rows: 3
 Enter number of columns: 4
 Enter number of students: 10
